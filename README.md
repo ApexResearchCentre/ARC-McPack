@@ -1,4 +1,4 @@
-# ARC Minecraft Community Server Modpack Repo
+# ARC Minecraft Community Server Modpack
 
 ## Overview
 This modpack is maintained by the ARC Community to streamline server access, manage version control, and deliver a balanced gameplay experience.
