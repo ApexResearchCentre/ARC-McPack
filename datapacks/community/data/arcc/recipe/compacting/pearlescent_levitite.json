@@ -1,6 +1,6 @@
 {
     "type":"create:compacting",
-    "heat_requirement": "heated",
+    "heat_requirement": "superheated",
     "ingredients": [
         {
       "amount": 1000,
@@ -10,7 +10,7 @@
     ],
     "results": [
         {
-            "id": "aeronautics:levitite",
+            "id": "aeronautics:pearlescent_levitite",
             "chance":0.75
         }
     ]
