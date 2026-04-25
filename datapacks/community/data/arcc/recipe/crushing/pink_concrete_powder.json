@@ -1,0 +1,15 @@
+{
+    "type":"create:crushing",
+    "ingredients": [
+        {
+            "item": "minecraft:pink_concrete"
+        }
+    ],
+    "processing_time": 250,
+    "results": [
+        {
+            "id": "minecraft:pink_concrete_powder",
+            "chance":1
+        }
+    ]
+}

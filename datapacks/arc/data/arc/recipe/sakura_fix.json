@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "trailandtales_delight:cherry_petal"
+        },
+        {
+            "item": "trailandtales_delight:cherry_petal"
+        },
+        {
+            "item": "trailandtales_delight:cherry_petal"
+        },
+        {
+            "item": "trailandtales_delight:cherry_petal"
+        }
+    ],
+    "result": {
+        "id": "minecraft:cherry_leaves",
+        "count": 1
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "PEB",
+        " G "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wind_charge"
+        },
+        "P": {
+            "item": "minecraft:prismarine_crystals"
+        },
+        "E": {
+            "item": "minecraft:ender_pearl"
+        },
+        "B": {
+            "item": "minecraft:blaze_powder"
+        },
+        "G": {
+            "item": "minecraft:echo_shard"
+        }
+    },
+    "result": {
+        "id": "minecraft:ender_eye",
+        "count": 1
+    }
+}

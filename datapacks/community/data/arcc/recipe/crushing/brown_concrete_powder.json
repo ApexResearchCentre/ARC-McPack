@@ -1,0 +1,15 @@
+{
+    "type":"create:crushing",
+    "ingredients": [
+        {
+            "item": "minecraft:brown_concrete"
+        }
+    ],
+    "processing_time": 250,
+    "results": [
+        {
+            "id": "minecraft:brown_concrete_powder",
+            "chance":1
+        }
+    ]
+}

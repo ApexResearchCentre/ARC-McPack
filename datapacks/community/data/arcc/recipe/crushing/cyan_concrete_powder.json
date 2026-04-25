@@ -1,0 +1,15 @@
+{
+    "type":"create:crushing",
+    "ingredients": [
+        {
+            "item": "minecraft:cyan_concrete"
+        }
+    ],
+    "processing_time": 250,
+    "results": [
+        {
+            "id": "minecraft:cyan_concrete_powder",
+            "chance":1
+        }
+    ]
+}
