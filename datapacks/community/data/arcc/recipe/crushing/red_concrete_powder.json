@@ -1,0 +1,15 @@
+{
+    "type":"create:crushing",
+    "ingredients": [
+        {
+            "item": "minecraft:red_concrete"
+        }
+    ],
+    "processing_time": 250,
+    "results": [
+        {
+            "id": "minecraft:red_concrete_powder",
+            "chance":1
+        }
+    ]
+}

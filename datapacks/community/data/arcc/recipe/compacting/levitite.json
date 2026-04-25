@@ -1,0 +1,17 @@
+{
+    "type":"create:compacting",
+    "heat_requirement": "heated",
+    "ingredients": [
+        {
+      "amount": 1000,
+      "fluid": "aeronautics:levitite_blend",
+      "type": "neoforge:single"
+}
+    ],
+    "results": [
+        {
+            "id": "aeronautics:levitite",
+            "chance":1
+        }
+    ]
+}
