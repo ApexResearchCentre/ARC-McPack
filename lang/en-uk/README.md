@@ -1,6 +1,6 @@
 # ARC Minecraft Community Server 
 
-[中文](https://github.com/ApexResearchCentre/ARC-McPack/blob/main/lang/zh-cn/README.md)
+[中文](https://github.com/ApexResearchCentre/ARC-McPack/blob/main/lang/zh-zn/README.md)
 
 ## Overview
 This modpack is maintained by the ARC Community to streamline server access, manage version control, and deliver a balanced gameplay experience.
