@@ -1,0 +1,57 @@
+name: Deploy Community Datapack
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get current date and time
+        id: datetime
+        run: echo "datetime=$(date +%Y%m%d-%H%M%S)" >> $GITHUB_OUTPUT
+
+      - name: Setup output directory
+        run: |
+          mkdir -p output
+          cp -r datapacks/community/* output/
+
+      - name: Create datapack zip
+        working-directory: output
+        run: zip -r ../community-datapack-${{ steps.datetime.outputs.datetime }}.zip .
+
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SCP_PRIVATE_KEY }}
+
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: community-datapack-${{ steps.datetime.outputs.datetime }}.zip
+          tag_name: datapack-${{ steps.datetime.outputs.datetime }}
+          name: Community Datapack ${{ steps.datetime.outputs.datetime }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload via SCP
+        if: always()
+        run: |
+          if [ -n "${{ secrets.SCP_HOST }}" ]; then
+            scp -o StrictHostKeyChecking=no -P ${SCP_PORT:-22} \
+              community-datapack-${{ steps.datetime.outputs.datetime }}.zip \
+              ${{ secrets.SCP_USER }}@${{ secrets.SCP_HOST }}:${{ secrets.SCP_DEST_PATH }}/
+          else
+            echo "SCP_HOST not configured, skipping SCP upload"
+          fi
+        env:
+          SCP_PORT: ${{ secrets.SCP_PORT }}
